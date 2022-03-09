@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">PDM</string>
+
+    <string name="descripcion_imagen">Imagen de app</string>
+
+    <string name="vista_login">Log-In</string>
+    <string name="correo">Correo Electronico</string>
+    <string name="password">Contraseña</string>
+    <string name="login">Iniciar Sesión</string>
+    <string name="signing">Registrarse</string>
+
+    <string name="registro">Registro</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="aceptar">Aceptar</string>
+    <string name="nombre_usuario">Nombre de Usuario</string>
+    <string name="confirmar_password">Confirmar Contraseña</string>
+    <string name="aceptar_legal">Aceptar los Terminos de Uso y Condiciones</string>
+
+    <string name="mensaje_bienvenida">Bienvenido</string>
+
+    <string name="no_coneccion_api">Falla al conectar al servidor</string>
+    <string name="campo_vacio">El campo no puede estar vacio</string>
+    <string name="dato_no_correo">El dato ingresado no es reconocio como un correo electrónico</string>
+    <string name="dato_no_password">La contraseña tiene que contener minimo 8 caracteres</string>
+    <string name="password_debil">Contraseña debil, debe contener letras mayusucas, minusculas y numeros</string>
+    <string name="password_diferente">La contraseña de confirmación es diferente</string>
+
+    <string name="validar_correo">Ingresa el código que se envio a tu correo para validarlo</string>
+    <string name="input_codigo">Ingresa el código aquí</string>
+    <string name="continuar">Continuar</string>
+    <string name="regenerar_codigo">Reenviar el código</string>
+
+</resources>
