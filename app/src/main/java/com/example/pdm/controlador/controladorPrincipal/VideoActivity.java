@@ -11,16 +11,19 @@ import java.lang.reflect.MalformedParameterizedTypeException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import android.os.Bundle;
+import android.widget.ImageButton;
+
+import com.example.pdm.R;
 
 public class VideoActivity extends JitsiMeetActivity{
 
     EditText code;
-    Button join;
+    ImageButton join;
 
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.vista_videchat);
+        setContentView(R.layout.vista_videochat);
         code = findViewById(R.id.addCode);
         join = findViewById(R.id.llamada);
 
