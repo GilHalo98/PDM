@@ -34,6 +34,8 @@ class Menu : FragmentoBase() {
             cambiarFragmento(fragmentoRegistro)
         }
 
+
+
         return fragmento
     }
 }
