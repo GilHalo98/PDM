@@ -1,33 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">PDM</string>
+    <string name="app_name">Proyecto Móviles</string>
+    <string name="vista_login">Log in</string>
+    <string name="correo">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Log in</string>
+    <string name="registro">Register</string>
+    <string name="registrarse">Sign in</string>
+    <string name="cancelar">Cancel</string>
+    <string name="aceptar">Accept</string>
+    <string name="nombre_usuario">Username</string>
+    <string name="confirmar_password">Cofirm Password</string>
+    <string name="aceptar_legal">Accept use of terms and coditions</string>
+    <string name="descripcion_login">Log in</string>
+    <string name="descripcion_registrarse">Sign in</string>
+    <string name="descripcion_vista_inicial">Sig in and Log in View</string>
+    <string name="descripcion_imagen">App image</string>
+    <string name="mensaje_bienvenida">Welcome</string>
+    <string name="validar_correo">Enter the code that was send to your email</string>
+    <string name="input_codigo">Enter the code</string>
+    <string name="continuar">Continue</string>
+    <string name="regenerar_codigo">Resend the Code</string>
+    <string name="no_coneccion_api">API ERROR</string>
+    <string name="codigo_invalido">Invalid Code</string>
+    <string name="username_invalido">Invalid Username</string>
+    <string name="username_largo">Username must be 10 characters long</string>
+    <string name="campo_vacio">Input can\'t be empty</string>
+    <string name="dato_no_correo">Input isn\'t an Email</string>
+    <string name="dato_no_password">Password must be at least 8 characters long</string>
+    <string name="password_debil">Password too weak, must have uppercase, lowercase and numbers</string>
+    <string name="password_diferente">Confirmation password is different</string>
+    <string name="longitud_codigo">Code must be 4 digits</string>
+    <string name="username_corto">Username too short</string>
+    <string name="historial">Call history</string>
+    <string name="configuracion">Configuration</string>
+    <string name="mensajes">Messages</string>
+    <string name="ajustes_cuenta">Acount</string>
+    <string name="ajustes_interfaz">Interface</string>
 
-    <string name="descripcion_imagen">Imagen de app</string>
+    <string name="idioma_default">Spanish</string>
+    <string name="idioma_ingles">English</string>
 
-    <string name="vista_login">Log-In</string>
-    <string name="correo">Correo Electronico</string>
-    <string name="password">Contraseña</string>
-    <string name="login">Iniciar Sesión</string>
-    <string name="signing">Registrarse</string>
+    <string name="registrar_admin">Register as Admin</string>
+    <string name="admin">Admin Panel</string>
+    <string name="admin_panel">Admin Panel</string>
+    <string name="mensaje_chat">Message</string>
+    <string name="escribe_mensaje">Write a message...</string>
+    <string name="ajustes_seguridad">Security</string>
+    <string name="logout">Log-Out</string>
+    <string name="titulo_configuracion_interfaz">Interfaz Configuration</string>
+    <string name="titulo_configuracion_seguridad">Security Configuration</string>
+    <string name="titulo_configuracion_cuenta">Acount Configuration</string>
+    <string name="cambiar_idioma">Change language</string>
+    <string name="realizar_cambios">Save Changes</string>
+    <string name="cambiar_password">To change the password for a new one, you need to introduce the old and the new password, once you do that, is necesari to login again with the new password</string>
+    <string name="password_antigua">Old Password</string>
 
-    <string name="registro">Registro</string>
-    <string name="cancelar">Cancelar</string>
-    <string name="aceptar">Aceptar</string>
-    <string name="nombre_usuario">Nombre de Usuario</string>
-    <string name="confirmar_password">Confirmar Contraseña</string>
-    <string name="aceptar_legal">Aceptar los Terminos de Uso y Condiciones</string>
-
-    <string name="mensaje_bienvenida">Bienvenido</string>
-
-    <string name="no_coneccion_api">Falla al conectar al servidor</string>
-    <string name="campo_vacio">El campo no puede estar vacio</string>
-    <string name="dato_no_correo">El dato ingresado no es reconocio como un correo electrónico</string>
-    <string name="dato_no_password">La contraseña tiene que contener minimo 8 caracteres</string>
-    <string name="password_debil">Contraseña debil, debe contener letras mayusucas, minusculas y numeros</string>
-    <string name="password_diferente">La contraseña de confirmación es diferente</string>
-
-    <string name="validar_correo">Ingresa el código que se envio a tu correo para validarlo</string>
-    <string name="input_codigo">Ingresa el código aquí</string>
-    <string name="continuar">Continuar</string>
-    <string name="regenerar_codigo">Reenviar el código</string>
-
+    <string-array name="lenguajes">
+        <item>Spanish</item>
+        <item>English</item>
+    </string-array>
+    <string name="label_cambiar_estado">Change</string>
+    <string name="hint_estado">Description</string>
+    <string name="texto_cambiar_estado">Change the user description</string>
+    <string name="texto_cambiar_email">Change the user Email, after the change you will be logout and the Email will be need validation</string>
+    <string name="texto_cambiar_username">Chagne the username, it needs to be unique</string>
+    <string name="password_cofirmacion">Confirmation Password</string>
+    <string name="username">Username</string>
+    <string name="email">Email</string>
 </resources>

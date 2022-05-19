@@ -3,9 +3,55 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Equipo/Desktop/programas/Programacion/Android_studio/PDM/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1865" />
+        <entry key="..\:/Users/Equipo/Desktop/programas/Programacion/Android_studio/PDM/app/src/main/res/drawable/ic_baseline_account_circle_24.xml" value="0.1475" />
+        <entry key="..\:/Users/Equipo/Desktop/programas/Programacion/Android_studio/PDM/app/src/main/res/drawable/ic_baseline_chat_24.xml" value="0.1475" />
+        <entry key="..\:/Users/Equipo/Desktop/programas/Programacion/Android_studio/PDM/app/src/main/res/drawable/ic_baseline_email_24.xml" value="0.1955" />
+        <entry key="..\:/Users/Equipo/Desktop/programas/Programacion/Android_studio/PDM/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.1475" />
+        <entry key="..\:/Users/Equipo/Desktop/programas/Programacion/Android_studio/PDM/app/src/main/res/drawable/ic_baseline_person_add_24.xml" value="0.129" />
+        <entry key="..\:/Users/Equipo/Desktop/programas/Programacion/Android_studio/PDM/app/src/main/res/drawable/ic_baseline_send_24.xml" value="0.129" />
+        <entry key="..\:/Users/Equipo/Desktop/programas/Programacion/Android_studio/PDM/app/src/main/res/drawable/ic_baseline_settings_24.xml" value="0.129" />
+        <entry key="..\:/Users/Equipo/Desktop/programas/Programacion/Android_studio/PDM/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1865" />
         <entry key="..\:/Users/Equipo/Desktop/programas/Programacion/Android_studio/PDM/app/src/main/res/layout/activity_login.xml" value="0.264" />
         <entry key="..\:/Users/Equipo/Desktop/programas/Programacion/Android_studio/PDM/app/src/main/res/layout/activity_registro.xml" value="0.264" />
         <entry key="..\:/Users/Equipo/Desktop/programas/Programacion/Android_studio/PDM/app/src/main/res/layout/activity_validar_correo.xml" value="0.264" />
+        <entry key="..\:/Users/Equipo/Desktop/programas/Programacion/Android_studio/PDM/app/src/main/res/layout/componente_confirmacion_password.xml" value="0.4" />
+        <entry key="..\:/Users/Equipo/Desktop/programas/Programacion/Android_studio/PDM/app/src/main/res/layout/componente_contacto.xml" value="0.536" />
+        <entry key="..\:/Users/Equipo/Desktop/programas/Programacion/Android_studio/PDM/app/src/main/res/layout/componente_item_chat.xml" value="0.6" />
+        <entry key="..\:/Users/Equipo/Desktop/programas/Programacion/Android_studio/PDM/app/src/main/res/layout/componente_item_chat_enviado.xml" value="0.44952893674293404" />
+        <entry key="..\:/Users/Equipo/Desktop/programas/Programacion/Android_studio/PDM/app/src/main/res/layout/componente_item_chat_recibido.xml" value="0.536" />
+        <entry key="..\:/Users/Equipo/Desktop/programas/Programacion/Android_studio/PDM/app/src/main/res/layout/componente_item_lista_mensajes.xml" value="0.264" />
+        <entry key="..\:/Users/Equipo/Desktop/programas/Programacion/Android_studio/PDM/app/src/main/res/layout/componente_item_mensaje_enviado.xml" value="0.14279606669516887" />
+        <entry key="..\:/Users/Equipo/Desktop/programas/Programacion/Android_studio/PDM/app/src/main/res/layout/componente_item_mensajes.xml" value="0.176" />
+        <entry key="..\:/Users/Equipo/Desktop/programas/Programacion/Android_studio/PDM/app/src/main/res/layout/componente_item_mensajes_recibido.xml" value="0.14279606669516887" />
+        <entry key="..\:/Users/Equipo/Desktop/programas/Programacion/Android_studio/PDM/app/src/main/res/layout/componente_usuario_no_agregado.xml" value="0.536" />
+        <entry key="..\:/Users/Equipo/Desktop/programas/Programacion/Android_studio/PDM/app/src/main/res/layout/fragment_configuracion.xml" value="0.18333333333333332" />
+        <entry key="..\:/Users/Equipo/Desktop/programas/Programacion/Android_studio/PDM/app/src/main/res/layout/fragmento_admin_panel.xml" value="0.13595553655408293" />
+        <entry key="..\:/Users/Equipo/Desktop/programas/Programacion/Android_studio/PDM/app/src/main/res/layout/fragmento_chat.xml" value="0.31666666666666665" />
+        <entry key="..\:/Users/Equipo/Desktop/programas/Programacion/Android_studio/PDM/app/src/main/res/layout/fragmento_chats.xml" value="0.18333333333333332" />
+        <entry key="..\:/Users/Equipo/Desktop/programas/Programacion/Android_studio/PDM/app/src/main/res/layout/fragmento_configuracion.xml" value="0.264" />
+        <entry key="..\:/Users/Equipo/Desktop/programas/Programacion/Android_studio/PDM/app/src/main/res/layout/fragmento_configuracion_cuenta.xml" value="0.4" />
+        <entry key="..\:/Users/Equipo/Desktop/programas/Programacion/Android_studio/PDM/app/src/main/res/layout/fragmento_configuracion_interfaz.xml" value="0.264" />
+        <entry key="..\:/Users/Equipo/Desktop/programas/Programacion/Android_studio/PDM/app/src/main/res/layout/fragmento_configuracion_seguridad.xml" value="0.264" />
+        <entry key="..\:/Users/Equipo/Desktop/programas/Programacion/Android_studio/PDM/app/src/main/res/layout/fragmento_historial.xml" value="0.15049166310389056" />
+        <entry key="..\:/Users/Equipo/Desktop/programas/Programacion/Android_studio/PDM/app/src/main/res/layout/fragmento_login.xml" value="0.264" />
+        <entry key="..\:/Users/Equipo/Desktop/programas/Programacion/Android_studio/PDM/app/src/main/res/layout/fragmento_mensajes.xml" value="0.264" />
+        <entry key="..\:/Users/Equipo/Desktop/programas/Programacion/Android_studio/PDM/app/src/main/res/layout/fragmento_menu_inicial.xml" value="0.264" />
+        <entry key="..\:/Users/Equipo/Desktop/programas/Programacion/Android_studio/PDM/app/src/main/res/layout/fragmento_menu_principal.xml" value="0.136" />
+        <entry key="..\:/Users/Equipo/Desktop/programas/Programacion/Android_studio/PDM/app/src/main/res/layout/fragmento_registro.xml" value="0.264" />
+        <entry key="..\:/Users/Equipo/Desktop/programas/Programacion/Android_studio/PDM/app/src/main/res/layout/fragmento_validar_correo.xml" value="0.2" />
+        <entry key="..\:/Users/Equipo/Desktop/programas/Programacion/Android_studio/PDM/app/src/main/res/layout/menu_pie.xml" value="0.2" />
+        <entry key="..\:/Users/Equipo/Desktop/programas/Programacion/Android_studio/PDM/app/src/main/res/layout/vista_inicial.xml" value="0.264" />
+        <entry key="..\:/Users/Equipo/Desktop/programas/Programacion/Android_studio/PDM/app/src/main/res/layout/vista_login.xml" value="0.4" />
+        <entry key="..\:/Users/Equipo/Desktop/programas/Programacion/Android_studio/PDM/app/src/main/res/layout/vista_principal.xml" value="0.152" />
+        <entry key="..\:/Users/Equipo/Desktop/programas/Programacion/Android_studio/PDM/app/src/main/res/layout/vista_registro.xml" value="0.18333333333333332" />
+        <entry key="..\:/Users/Equipo/Desktop/programas/Programacion/Android_studio/PDM/app/src/main/res/layout/vista_validar_correo.xml" value="0.18333333333333332" />
+        <entry key="..\:/Users/Equipo/Desktop/programas/Programacion/Android_studio/PDM/app/src/main/res/menu/admin_menu_pie.xml" value="0.13595553655408293" />
+        <entry key="..\:/Users/Equipo/Desktop/programas/Programacion/Android_studio/PDM/app/src/main/res/menu/menu_actionbar_inicial.xml" value="0.2" />
+        <entry key="..\:/Users/Equipo/Desktop/programas/Programacion/Android_studio/PDM/app/src/main/res/menu/menu_configuracion.xml" value="0.264" />
+        <entry key="..\:/Users/Equipo/Desktop/programas/Programacion/Android_studio/PDM/app/src/main/res/menu/menu_inicial.xml" value="0.4" />
+        <entry key="..\:/Users/Equipo/Desktop/programas/Programacion/Android_studio/PDM/app/src/main/res/menu/menu_pie.xml" value="0.264" />
+        <entry key="..\:/Users/Equipo/Desktop/programas/Programacion/Android_studio/PDM/app/src/main/res/menu/menu_principal.xml" value="0.18333333333333332" />
       </map>
     </option>
   </component>
@@ -14,5 +60,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.1" />
+      </ProjectState>
+    </option>
   </component>
 </project>

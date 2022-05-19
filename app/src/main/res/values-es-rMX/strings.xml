@@ -1,0 +1,85 @@
+<resources>
+    <string name="app_name">Proyecto Móviles</string>
+
+    <string name="vista_login">Log-In</string>
+    <string name="correo">Correo Electronico</string>
+    <string name="password">Contraseña</string>
+    <string name="login">Iniciar Sesión</string>
+
+    <string name="registro">Registro</string>
+    <string name="registrarse">Registrarse</string>
+
+    <string name="cancelar">Cancelar</string>
+    <string name="aceptar">Aceptar</string>
+    <string name="nombre_usuario">Nombre de Usuario</string>
+    <string name="confirmar_password">Confirmar Contraseña</string>
+    <string name="aceptar_legal">Aceptar los Terminos de Uso y Condiciones</string>
+    <string name="registrar_admin">Registrar como administrador</string>
+
+    <!-- Textos descriptivos -->
+    <string name="descripcion_login">Inicio de sesión</string>
+    <string name="descripcion_registrarse">Registro de usuario</string>
+    <string name="descripcion_vista_inicial">Vista de registro e incio de sesión</string>
+    <string name="descripcion_imagen">Imagen de app</string>
+    <string name="admin_panel">Panel de administración</string>
+
+    <string name="mensaje_bienvenida">Bienvenido</string>
+
+    <string name="validar_correo">Ingresa el código que se envio a tu correo para validarlo</string>
+    <string name="input_codigo">Ingresa el código aquí</string>
+    <string name="continuar">Continuar</string>
+    <string name="regenerar_codigo">Reenviar el código</string>
+
+    <!-- Mensaje de errores -->
+    <string name="no_coneccion_api">Falla al conectar al servidor</string>
+    <string name="codigo_invalido">Código no valido</string>
+    <string name="username_invalido">Username no valido</string>
+
+    <!-- Mensaje de validacion de campos -->
+    <string name="username_largo">El username no debe de exceder los 10 caracteres</string>
+    <string name="campo_vacio">El campo no puede estar vacio</string>
+    <string name="dato_no_correo">El dato ingresado no es reconocio como un correo electrónico</string>
+    <string name="dato_no_password">La contraseña tiene que contener mínimo 8 caracteres</string>
+    <string name="password_debil">Contraseña debil, debe contener letras mayusucas, minusculas y numeros</string>
+    <string name="password_diferente">La contraseña de confirmación es diferente</string>
+    <string name="longitud_codigo">El código debe de ser de 4 dígitos</string>
+    <string name="username_corto">El Username es demaciado corto</string>
+
+    <!-- Texto del bottom navbar -->
+    <string name="historial">Historial de Llamadas</string>
+    <string name="configuracion">Configuración</string>
+    <string name="mensajes">Mensajes</string>
+    <string name="admin">Panel de Administrador</string>
+
+    <!-- Texto del nav de configuraciones -->
+    <string name="ajustes_cuenta">Cuenta</string>
+    <string name="ajustes_interfaz">Interfaz</string>
+    <string name="ajustes_seguridad">Seguridad</string>
+    <string name="logout">Terminar Sesión</string>
+
+    <!-- Texto del actionbar inicial -->
+    <string name="idioma_default">Español</string>
+    <string name="idioma_ingles">Ingles</string>
+    <string name="mensaje_chat">Mensaje</string>
+    <string name="escribe_mensaje">Escribe un mensaje...</string>
+    <string name="titulo_configuracion_interfaz">Configuración de Interfaz</string>
+    <string name="titulo_configuracion_seguridad">Configuración de Seguridad</string>
+    <string name="titulo_configuracion_cuenta">Configuración de Cuenta</string>
+    <string name="cambiar_idioma">Cambia el idioma de la interfaz</string>
+    <string name="realizar_cambios">Guardar Cambios</string>
+    <string name="cambiar_password">Para cambiar la contraseña, es necesario ingresar la contraseña antigua, una vez cambiada la contraseña se necesita reiniciar la sesión con la nueva contraseña</string>
+    <string name="password_antigua">Contraseña Anterior</string>
+
+    <string-array name="lenguajes">
+        <item name="es">Español</item>
+        <item id="en">Ingles</item>
+    </string-array>
+    <string name="label_cambiar_estado">Cambiar</string>
+    <string name="hint_estado">Estado</string>
+    <string name="texto_cambiar_estado">Cambia el estado del usuairo</string>
+    <string name="texto_cambiar_email">Cambia el correo electrónico del usuario, despues de cambiar el corre la sesion se cerrara y se necesitara validar el nuevo correo electrónico</string>
+    <string name="texto_cambiar_username">Cambia el nombre de usuario, este tiene que ser unico</string>
+    <string name="password_cofirmacion">Contraseña de Confirmación</string>
+    <string name="username">Nombre de Usuario</string>
+    <string name="email">Correo Eletrónico</string>
+</resources>

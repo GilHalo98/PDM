@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/mensajes"
+        android:icon="@drawable/ic_baseline_chat_24"
+        android:title="@string/mensajes" />
+
+    <item
+        android:id="@+id/historial"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="@string/historial" />
+
+    <item
+        android:id="@+id/configuracion"
+        android:icon="@drawable/ic_baseline_settings_24"
+        android:title="@string/configuracion" />
+
+    <item
+        android:id="@+id/admin"
+        android:icon="@drawable/ic_baseline_supervised_user_circle_24"
+        android:title="@string/admin" />
+</menu>

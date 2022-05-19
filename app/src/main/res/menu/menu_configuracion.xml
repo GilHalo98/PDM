@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/ajustes_cuenta"
+        android:icon="@drawable/ic_baseline_account_circle_24"
+        android:title="@string/ajustes_cuenta" />
+
+    <item
+        android:id="@+id/ajustes_seguridad"
+        android:icon="@drawable/ic_baseline_security_24"
+        android:title="@string/ajustes_seguridad" />
+
+    <item
+        android:id="@+id/ajustes_interfaz"
+        android:icon="@drawable/ic_baseline_palette_24"
+        android:title="@string/ajustes_interfaz" />
+
+    <item
+        android:id="@+id/ajustes_logout"
+        android:icon="@drawable/ic_baseline_lock_24"
+        android:title="@string/logout" />
+</menu>
