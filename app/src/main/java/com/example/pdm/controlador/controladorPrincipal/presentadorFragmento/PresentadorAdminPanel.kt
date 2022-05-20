@@ -14,7 +14,7 @@ class PresentadorAdminPanel(private val repository: Repository) : PresentadorBas
     val respuestaListaUsuarios: MutableLiveData<Response<ListaUsuariosAdmin>> = MutableLiveData()
     val respuestaEliminarUsuario: MutableLiveData<Response<RespuestaGenerica>> = MutableLiveData()
 
-    fun getUserData(token: String, correo: String) {
+    fun getListaUsuarios(token: String, correo: String) {
         viewModelScope.launch {
             val respuestaAPI = repository.listarUsuarios(token, correo)
 

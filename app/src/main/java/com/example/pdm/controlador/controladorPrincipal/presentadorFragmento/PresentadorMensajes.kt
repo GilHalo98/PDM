@@ -30,6 +30,7 @@ class PresentadorMensajes(private val repository: Repository) : PresentadorBase(
         }
     }
 
+
     // Retorna los contactos de la lista de contactos del usuario.
     fun getContactosUsuario(token: String) {
         viewModelScope.launch {
