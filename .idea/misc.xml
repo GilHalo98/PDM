@@ -17,6 +17,7 @@
         <entry key="..\:/Users/Equipo/Desktop/programas/Programacion/Android_studio/PDM/app/src/main/res/layout/activity_validar_correo.xml" value="0.264" />
         <entry key="..\:/Users/Equipo/Desktop/programas/Programacion/Android_studio/PDM/app/src/main/res/layout/componente_confirmacion_password.xml" value="0.4" />
         <entry key="..\:/Users/Equipo/Desktop/programas/Programacion/Android_studio/PDM/app/src/main/res/layout/componente_contacto.xml" value="0.536" />
+        <entry key="..\:/Users/Equipo/Desktop/programas/Programacion/Android_studio/PDM/app/src/main/res/layout/componente_contacto_admin.xml" value="0.536" />
         <entry key="..\:/Users/Equipo/Desktop/programas/Programacion/Android_studio/PDM/app/src/main/res/layout/componente_item_chat.xml" value="0.6" />
         <entry key="..\:/Users/Equipo/Desktop/programas/Programacion/Android_studio/PDM/app/src/main/res/layout/componente_item_chat_enviado.xml" value="0.44952893674293404" />
         <entry key="..\:/Users/Equipo/Desktop/programas/Programacion/Android_studio/PDM/app/src/main/res/layout/componente_item_chat_recibido.xml" value="0.536" />
@@ -26,7 +27,7 @@
         <entry key="..\:/Users/Equipo/Desktop/programas/Programacion/Android_studio/PDM/app/src/main/res/layout/componente_item_mensajes_recibido.xml" value="0.14279606669516887" />
         <entry key="..\:/Users/Equipo/Desktop/programas/Programacion/Android_studio/PDM/app/src/main/res/layout/componente_usuario_no_agregado.xml" value="0.536" />
         <entry key="..\:/Users/Equipo/Desktop/programas/Programacion/Android_studio/PDM/app/src/main/res/layout/fragment_configuracion.xml" value="0.18333333333333332" />
-        <entry key="..\:/Users/Equipo/Desktop/programas/Programacion/Android_studio/PDM/app/src/main/res/layout/fragmento_admin_panel.xml" value="0.13595553655408293" />
+        <entry key="..\:/Users/Equipo/Desktop/programas/Programacion/Android_studio/PDM/app/src/main/res/layout/fragmento_admin_panel.xml" value="0.4" />
         <entry key="..\:/Users/Equipo/Desktop/programas/Programacion/Android_studio/PDM/app/src/main/res/layout/fragmento_chat.xml" value="0.31666666666666665" />
         <entry key="..\:/Users/Equipo/Desktop/programas/Programacion/Android_studio/PDM/app/src/main/res/layout/fragmento_chats.xml" value="0.18333333333333332" />
         <entry key="..\:/Users/Equipo/Desktop/programas/Programacion/Android_studio/PDM/app/src/main/res/layout/fragmento_configuracion.xml" value="0.264" />

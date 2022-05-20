@@ -14,6 +14,7 @@ import kotlinx.android.synthetic.main.componente_usuario_no_agregado.view.*
 class AdaptadorComponenteMensajes(
     private val contexto: Context,
     private var listaContactos: ArrayList<Contacto> = ArrayList()
+
 ): RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     // Nos permite poner listener a cada componente del recyclerView
     var onItemClick: ((Contacto) -> Unit)? = null

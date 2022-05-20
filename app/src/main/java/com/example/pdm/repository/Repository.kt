@@ -56,4 +56,12 @@ class Repository {
     suspend fun cambiarUsername(token: String, cuerpo: CambioUsername): Response<RespuestaGenerica> {
         return RetrofitInstance.api.cambiarUsername(token, cuerpo)
     }
+
+    suspend fun listarUsuarios(token: String, correo: String): Response<ListaUsuariosAdmin> {
+        return RetrofitInstance.api.listarUsuarios(token, correo)
+    }
+
+    suspend fun eliminarUsuario(token: String, cuerpo: EliminarUsuarioAdmin): Response<RespuestaGenerica> {
+        return RetrofitInstance.api.eliminarUsuario(token, cuerpo)
+    }
 }

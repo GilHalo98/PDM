@@ -86,7 +86,7 @@
                 android:id="@+id/componenteMensajes"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:listitem="@layout/componente_contacto" />
+                tools:listitem="@layout/componente_usuario_no_agregado" />
         </ScrollView>
 
     </RelativeLayout>

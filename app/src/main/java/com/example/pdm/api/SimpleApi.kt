@@ -90,4 +90,17 @@ interface SimpleApi {
         @Header("token") token: String,
         @Body cuerpo: CambioUsername,
     ): Response<RespuestaGenerica>
+
+    // Enlista los usuarios desde un endpoid del administrador.
+    @GET("admin/usuarios/{correo}")
+    suspend fun listarUsuarios(
+        @Header("token") token: String,
+        @Path("correo") correo: String,
+    ): Response<ListaUsuariosAdmin>
+
+    @DELETE("admin/usuario/eliminar")
+    suspend fun eliminarUsuario(
+        @Header("token") token: String,
+        @Body cuerpo: EliminarUsuarioAdmin,
+    ): Response<RespuestaGenerica>
 }

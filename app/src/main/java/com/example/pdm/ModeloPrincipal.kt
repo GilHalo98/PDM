@@ -115,7 +115,6 @@ class ModeloPrincipal : ModeloBase() {
             }
 
             R.id.historial-> {
-                // cambiarFragmento(fragmentoHistorial)
                 cambiarFragmento(fragmentoVideoChat)
             }
 
