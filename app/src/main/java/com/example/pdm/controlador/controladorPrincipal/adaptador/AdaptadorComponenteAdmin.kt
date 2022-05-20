@@ -40,7 +40,12 @@ class AdaptadorComponenteAdmin(
         // Consulta el elemento en una posicion dada.
         val item = listaUsuarios[position]
 
-        // Establecemos valores de los widgets de la vista.
+        if (holder is ViewHolderUsuario) {
+            // Establecemos valores de los widgets de la vista.
+            holder.textViewEmail.text = item.correo
+            holder.textViewUsername.text = item.nombreUsuario
+
+        }
     }
 
     // retorna el conteo de items en la vista.
@@ -51,7 +56,8 @@ class AdaptadorComponenteAdmin(
     // Subclase que mantiene el map de todos los elementos en la vista.
     inner class ViewHolderUsuario(itemView: View) : RecyclerView.ViewHolder(itemView) {
         // Instanciamos los widgets que se usaran en el viewHolder.
-        val textViewMensaje: TextView = itemView.findViewById(R.id.textViewMensaje)
+        val textViewUsername: TextView = itemView.findViewById(R.id.textViewUsername)
+        val textViewEmail: TextView = itemView.findViewById(R.id.textViewEmail)
 
         init {
             itemView.setOnClickListener {
