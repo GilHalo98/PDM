@@ -125,7 +125,15 @@ class Cuenta : FragmentoBase() {
 
                 // Mostramos la respuesta de la API.
                 presentador.establecerCambioUsername(viewLifecycleOwner, contexto, this)
+
+                // Termina el cuadro de dialogo.
+                dialogoUsername.hide()
             }
+        }
+
+        componenteConfirmacionUsername.botonCancelar.setOnClickListener {
+            // Termina el cuadro de dialogo.
+            dialogoUsername.hide()
         }
 
         componenteConfirmacionEmail.botonConfirmar.setOnClickListener {
@@ -141,7 +149,15 @@ class Cuenta : FragmentoBase() {
 
                 // Mostramos la respuesta de la API.
                 presentador.establecerCambioEmail(viewLifecycleOwner, contexto, this)
+
+                // Termina el cuadro de dialogo.
+                dialogoEmail.hide()
             }
+        }
+
+        componenteConfirmacionEmail.botonCancelar.setOnClickListener {
+            // Termina el cuadro de dialogo.
+            dialogoEmail.hide()
         }
 
         // Escuchamos por los eventos de los botones del fragmento.

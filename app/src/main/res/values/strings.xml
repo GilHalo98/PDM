@@ -68,4 +68,7 @@
     <string name="password_cofirmacion">Confirmation Password</string>
     <string name="username">Username</string>
     <string name="email">Email</string>
+    <string name="sala_video_chat">Make a videochat conference room</string>
+    <string name="codigo_sala">Add the code for your room</string>
+    <string name="video_chat">Videochat Room</string>
 </resources>

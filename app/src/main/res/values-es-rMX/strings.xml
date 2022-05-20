@@ -82,4 +82,7 @@
     <string name="password_cofirmacion">Contraseña de Confirmación</string>
     <string name="username">Nombre de Usuario</string>
     <string name="email">Correo Eletrónico</string>
+    <string name="sala_video_chat">Crea una sala de videoconferencia</string>
+    <string name="codigo_sala">Agrega el código de tu sala</string>
+    <string name="video_chat">Sala de vídeo chat</string>
 </resources>

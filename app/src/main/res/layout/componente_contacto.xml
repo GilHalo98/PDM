@@ -51,12 +51,6 @@
                 android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 android:textSize="20sp" />
 
-            <ImageButton
-                android:id="@+id/imageButton3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/ic_baseline_video_call_24" />
-
             <TextView
                 android:id="@+id/textViewUltimoMensaje"
                 android:layout_width="match_parent"

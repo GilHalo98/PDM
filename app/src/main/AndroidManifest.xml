@@ -28,7 +28,10 @@
             android:exported="true">
         </activity>
 
-
+        <activity android:name=".VideoActivity"
+            android:theme="@style/Theme.Design.Light.NoActionBar"
+            android:exported="true">
+        </activity>
 
     </application>
 

@@ -5,10 +5,7 @@ import android.view.MenuItem
 import androidx.lifecycle.ViewModelProvider
 import com.example.pdm.controlador.controladorPrincipal.PresentadorPrincipal
 import com.example.pdm.controlador.controladorPrincipal.PrincipalFactory
-import com.example.pdm.controlador.controladorPrincipal.fragmento.AdminPanel
-import com.example.pdm.controlador.controladorPrincipal.fragmento.Historial
-import com.example.pdm.controlador.controladorPrincipal.fragmento.Configuracion
-import com.example.pdm.controlador.controladorPrincipal.fragmento.Mensajes
+import com.example.pdm.controlador.controladorPrincipal.fragmento.*
 import com.example.pdm.repository.Repository
 import com.example.pdm.socketIO.SocketInstance
 import com.example.pdm.util.claseBase.ModeloBase
@@ -18,6 +15,7 @@ class ModeloPrincipal : ModeloBase() {
     // Fragmentos.
     private lateinit var fragmentoConfiguracion: Configuracion
     private lateinit var fragmentoHistorial: Historial
+    private lateinit var fragmentoVideoChat: VideoChat
     private lateinit var fragmentoMensajes: Mensajes
     private lateinit var fragmentoAdminPanel: AdminPanel
 
@@ -73,6 +71,7 @@ class ModeloPrincipal : ModeloBase() {
         // Instancia de fragmentos de la vista.
         fragmentoConfiguracion = Configuracion()
         fragmentoHistorial = Historial()
+        fragmentoVideoChat = VideoChat()
         fragmentoMensajes = Mensajes()
         fragmentoAdminPanel = AdminPanel()
 
@@ -116,7 +115,8 @@ class ModeloPrincipal : ModeloBase() {
             }
 
             R.id.historial-> {
-                cambiarFragmento(fragmentoHistorial)
+                // cambiarFragmento(fragmentoHistorial)
+                cambiarFragmento(fragmentoVideoChat)
             }
 
             R.id.mensajes-> {
