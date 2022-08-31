@@ -32,9 +32,6 @@ class Registro : FragmentoBase() {
     // Presentador del fragmento.
     private lateinit var presentador: PresentadorRegistro
 
-    // Bundle de datos a pasar al fragmento de validacion de correo.
-    private lateinit var paqueteDatos: Bundle
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
@@ -46,7 +43,11 @@ class Registro : FragmentoBase() {
         paqueteDatos = Bundle()
 
         // Elementos del fragmento.
-        val fragmento = inflater.inflate(R.layout.fragmento_registro, container, false)
+        fragmento = inflater.inflate(
+            R.layout.fragmento_registro,
+            container,
+            false
+        )
 
         // Instanciamos el contexto de la app.
         val contexto = requireContext().applicationContext

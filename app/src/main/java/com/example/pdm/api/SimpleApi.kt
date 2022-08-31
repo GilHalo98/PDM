@@ -50,7 +50,7 @@ interface SimpleApi {
     ): Response<RespuestaContactosUsuario>
 
     // Agrega un usuario a la lista de contactos del usuario.
-    @POST("usuarios/contactos/agregar/")
+    @POST("usuarios/contacto/agregar/")
     suspend fun agregarContacto(
         @Header("token") token: String,
         @Body cuerpo: AgregarContacto,
@@ -98,9 +98,9 @@ interface SimpleApi {
         @Path("correo") correo: String,
     ): Response<ListaUsuariosAdmin>
 
-    @DELETE("admin/usuario/eliminar")
+    @DELETE("admin/usuario/eliminar/{usuarioEliminar}")
     suspend fun eliminarUsuario(
         @Header("token") token: String,
-        @Body cuerpo: EliminarUsuarioAdmin,
+        @Path("usuarioEliminar") usuarioEliminar: String,
     ): Response<RespuestaGenerica>
 }

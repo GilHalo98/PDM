@@ -1,6 +1,7 @@
 package com.example.pdm.controlador.controladorPrincipal.adaptador
 
 import android.content.Context
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,11 +9,12 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.pdm.R
 import com.example.pdm.modelos.AdminUsuario
+import com.example.pdm.modelos.Contacto
 import kotlinx.android.synthetic.main.componente_contacto_admin.view.*
 
 class AdaptadorComponenteAdmin(
     private val contexto: Context,
-    private val listaUsuarios: ArrayList<AdminUsuario> = ArrayList()
+    private var listaUsuarios: ArrayList<AdminUsuario> = ArrayList()
 
 ): RecyclerView.Adapter<RecyclerView.ViewHolder>()  {
     // Nos permite poner listener a cada componente del recyclerView
@@ -51,6 +53,11 @@ class AdaptadorComponenteAdmin(
     // retorna el conteo de items en la vista.
     override fun getItemCount(): Int {
         return listaUsuarios.size
+    }
+
+    // Cambia la lista de usuarios.
+    fun establcerListaUsuarios(lista: List<AdminUsuario>) {
+        listaUsuarios = lista as ArrayList<AdminUsuario>
     }
 
     // Subclase que mantiene el map de todos los elementos en la vista.

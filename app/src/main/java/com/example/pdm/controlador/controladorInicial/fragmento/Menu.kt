@@ -20,7 +20,7 @@ class Menu : FragmentoBase() {
         fragmentoRegistro = Registro()
         fragmentoLogin = Login()
 
-        val fragmento = inflater.inflate(
+        fragmento = inflater.inflate(
             R.layout.fragmento_menu_inicial,
             container,
             false

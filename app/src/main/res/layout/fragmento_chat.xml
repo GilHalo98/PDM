@@ -8,7 +8,8 @@
     <RelativeLayout
         android:id="@+id/relativeLayout2"
         android:layout_width="0dp"
-        android:layout_height="60dp"
+        android:layout_height="40dp"
+        android:background="@color/colorPrimaryDark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -26,7 +27,7 @@
             android:layout_toEndOf="@+id/imageView2"
             android:gravity="center|start"
             android:text="@string/nombre_usuario"
-            android:textSize="25sp" />
+            android:textSize="16sp" />
 
         <ImageView
             android:id="@+id/imageView2"
@@ -39,6 +40,17 @@
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
             app:srcCompat="@drawable/pfp_dev" />
+
+        <ImageButton
+            android:id="@+id/botonVideoLlamadaPrivada"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:backgroundTint="#00FFFFFF"
+            android:tint="#304FFE"
+            app:srcCompat="@drawable/ic_baseline_videocam_24" />
 
     </RelativeLayout>
 

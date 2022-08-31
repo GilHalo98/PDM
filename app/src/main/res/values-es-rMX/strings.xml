@@ -85,4 +85,7 @@
     <string name="sala_video_chat">Crea una sala de videoconferencia</string>
     <string name="codigo_sala">Agrega el código de tu sala</string>
     <string name="video_chat">Sala de vídeo chat</string>
+    <string name="confirmar_operacion">¿Estas seguro de continuar con esta operación?</string>
+    <string name="descripcion_confirmar_operacion">¡Una vez que hagas esta operación, no hay vuelta atras!</string>
+    <string name="peticion_video_llamada">Un usuario te esta marcando</string>
 </resources>

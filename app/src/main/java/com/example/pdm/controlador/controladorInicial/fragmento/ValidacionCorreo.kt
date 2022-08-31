@@ -31,7 +31,6 @@ class ValidacionCorreo : FragmentoBase() {
     private lateinit var presentador: PresentadorValidacionCorreo
 
     // Bundle de datos pasados.
-    private lateinit var paqueteDatos: Bundle
     private lateinit var nuevoPaqueteDatos: Bundle
 
     override fun onCreateView(
@@ -47,7 +46,7 @@ class ValidacionCorreo : FragmentoBase() {
         val correo = paqueteDatos.getString("correo")!!
 
         // Elementos del fragmento.
-        val fragmento = inflater.inflate(
+        fragmento = inflater.inflate(
             R.layout.fragmento_validar_correo,
             container,
             false

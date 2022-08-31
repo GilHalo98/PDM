@@ -27,9 +27,6 @@ class Seguridad : FragmentoBase() {
     // Presentador del fragmento.
     private lateinit var presentador: PresentadorSeguridad
 
-    // Bundle de datos pasados.
-    private lateinit var paqueteDatos: Bundle
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
@@ -40,7 +37,7 @@ class Seguridad : FragmentoBase() {
         val token = paqueteDatos.get("token").toString()
 
         // Elementos del fragmento.
-        val fragmento = inflater.inflate(
+        fragmento = inflater.inflate(
             R.layout.fragmento_configuracion_seguridad,
             container,
             false

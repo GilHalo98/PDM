@@ -61,7 +61,7 @@ class Repository {
         return RetrofitInstance.api.listarUsuarios(token, correo)
     }
 
-    suspend fun eliminarUsuario(token: String, cuerpo: EliminarUsuarioAdmin): Response<RespuestaGenerica> {
-        return RetrofitInstance.api.eliminarUsuario(token, cuerpo)
+    suspend fun eliminarUsuario(token: String, usuarioEliminar: String): Response<RespuestaGenerica> {
+        return RetrofitInstance.api.eliminarUsuario(token, usuarioEliminar)
     }
 }

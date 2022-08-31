@@ -46,9 +46,6 @@ class Cuenta : FragmentoBase() {
     // Presentador del fragmento.
     private lateinit var presentador: PresentadorCuenta
 
-    // Bundle de datos pasados.
-    private lateinit var paqueteDatos: Bundle
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
@@ -59,7 +56,7 @@ class Cuenta : FragmentoBase() {
         val token = paqueteDatos.get("token").toString()
 
         // Elementos del fragmento.
-        val fragmento = inflater.inflate(
+        fragmento = inflater.inflate(
             R.layout.fragmento_configuracion_cuenta,
             container,
             false
@@ -110,6 +107,12 @@ class Cuenta : FragmentoBase() {
             this,
             factoryFragment
         ).get(PresentadorCuenta::class.java)
+
+        // Consultamos los datos de preferencia del usuario.
+        presentador.getUserData(token)
+
+        // Mostramos los datos como datos defautl.
+        presentador.mostrarDatos(viewLifecycleOwner, inputCambioEstado, inputCambioUsername, inputCambioEmail)
 
         // Escuchamos por eventos en los botones de los componentes de los dialogos.
         componenteConfirmacionUsername.botonConfirmar.setOnClickListener {

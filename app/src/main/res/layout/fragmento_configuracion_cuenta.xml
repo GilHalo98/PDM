@@ -22,8 +22,8 @@
             android:layout_height="80dp"
             android:layout_alignParentStart="true"
             android:layout_marginStart="0dp"
-            tools:tint="@color/color_texto_boton"
-            app:srcCompat="@drawable/ic_baseline_security_24" />
+            app:srcCompat="@drawable/ic_baseline_security_24"
+            tools:tint="@color/color_texto_boton" />
 
         <TextView
             android:id="@+id/tituloConfiguracionCuenta"

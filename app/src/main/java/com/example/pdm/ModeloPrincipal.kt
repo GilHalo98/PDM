@@ -1,7 +1,11 @@
 package com.example.pdm
 
+import android.app.AlertDialog
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.view.MenuItem
+import android.view.View
 import androidx.lifecycle.ViewModelProvider
 import com.example.pdm.controlador.controladorPrincipal.PresentadorPrincipal
 import com.example.pdm.controlador.controladorPrincipal.PrincipalFactory
@@ -9,15 +13,16 @@ import com.example.pdm.controlador.controladorPrincipal.fragmento.*
 import com.example.pdm.repository.Repository
 import com.example.pdm.socketIO.SocketInstance
 import com.example.pdm.util.claseBase.ModeloBase
+import com.example.pdm.util.enumerador.Eventos
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class ModeloPrincipal : ModeloBase() {
     // Fragmentos.
     private lateinit var fragmentoConfiguracion: Configuracion
-    private lateinit var fragmentoHistorial: Historial
     private lateinit var fragmentoVideoChat: VideoChat
     private lateinit var fragmentoMensajes: Mensajes
     private lateinit var fragmentoAdminPanel: AdminPanel
+    private lateinit var fragmentoPeticionVideoLlamada: PeticionVideoLlamada
 
     // Componentes de la vista.
     private lateinit var navegacionPie: BottomNavigationView
@@ -54,7 +59,7 @@ class ModeloPrincipal : ModeloBase() {
         SocketInstance.crearInstancia(token)
 
         // Conectamos el cliente del socket.
-        SocketInstance.conectar(token)
+        SocketInstance.conectar()
 
         // Inicializamos los datos a enviar.
         paqueteDatos = Bundle()
@@ -70,14 +75,15 @@ class ModeloPrincipal : ModeloBase() {
 
         // Instancia de fragmentos de la vista.
         fragmentoConfiguracion = Configuracion()
-        fragmentoHistorial = Historial()
         fragmentoVideoChat = VideoChat()
         fragmentoMensajes = Mensajes()
         fragmentoAdminPanel = AdminPanel()
+        fragmentoPeticionVideoLlamada = PeticionVideoLlamada()
 
         // Asignamos el paquete de datos a los fragmentos que los usaran.
         fragmentoConfiguracion.arguments = paqueteDatos
         fragmentoMensajes.arguments = paqueteDatos
+        fragmentoAdminPanel.arguments = paqueteDatos
 
         // Establece el fragmento por default.
         cambiarFragmento(fragmentoMensajes)
@@ -89,13 +95,40 @@ class ModeloPrincipal : ModeloBase() {
             manejarInputMenuPie(it)
             true
         }
+
+        // Escuchamos por las peticiones de video llamadas privadas.
+        SocketInstance.cliente.on(Eventos.PETICION_VIDEO_LLAMADA.id) {
+            // Almacenamos el remitente de la peticion.
+            paqueteDatos.putString("destinatario", it[0].toString())
+            paqueteDatos.putString("contacto", it[1].toString())
+
+            // Prepara los argumetos del fragmentos, agrega el destinatario y el remitente de la
+            // peticion de la video llamada.
+            fragmentoPeticionVideoLlamada.arguments = paqueteDatos
+
+            // Cambia el fragmento a la peticion de video llamada.
+            cambiarFragmento(fragmentoPeticionVideoLlamada)
+        }
+
+        SocketInstance.cliente.on(Eventos.VIDEO_LLAMADA_ACEPTADA.id) {
+            val destinatario = it[0].toString()
+            SocketInstance.enviarCodigoVideoLlamada(destinatario)
+        }
+
+        SocketInstance.cliente.on(Eventos.STREAMING_VIDEO_LLAMADA.id) {
+            // Se cambia a la vista de la video llamada y se pasa el codigo de la sala.
+            val codigoSala = it[0].toString()
+            paqueteDatos.putString("codigo", codigoSala)
+            fragmentoVideoChat.arguments = paqueteDatos
+            cambiarFragmento(fragmentoVideoChat)
+        }
     }
 
     override fun onDestroy() {
         super.onDestroy()
 
         // Terminamos el cliente del socket.
-        SocketInstance.desconectar(token)
+        SocketInstance.desconectar()
     }
 
     fun inflarMenuPie() {
@@ -115,6 +148,8 @@ class ModeloPrincipal : ModeloBase() {
             }
 
             R.id.historial-> {
+                paqueteDatos.putString("codigo", "")
+                fragmentoVideoChat.arguments = paqueteDatos
                 cambiarFragmento(fragmentoVideoChat)
             }
 

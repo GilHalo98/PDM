@@ -14,9 +14,6 @@ import com.example.pdm.util.enumerador.Eventos
 import kotlinx.android.synthetic.main.fragmento_chat.view.*
 
 class Chat : FragmentoBase() {
-    // Bundle de datos pasados.
-    private lateinit var paqueteDatos: Bundle
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -26,7 +23,11 @@ class Chat : FragmentoBase() {
         paqueteDatos = requireArguments()
 
         // Elementos del fragmento.
-        val fragmento = inflater.inflate(R.layout.fragmento_chat, container, false)
+        fragmento = inflater.inflate(
+            R.layout.fragmento_chat,
+            container,
+            false
+        )
 
         // Contexto del fragmento.
         val contexto = requireContext().applicationContext
@@ -69,6 +70,14 @@ class Chat : FragmentoBase() {
             }
 
             fragmento.inputMensaje.editText!!.text.clear()
+        }
+
+        // Escuchamos por el boton de realizar video llamada.
+        fragmento.botonVideoLlamadaPrivada.setOnClickListener {
+            // Realiza una peticion a al contacto para una video llamada privada.
+            SocketInstance.realizarPeticionVideoLlamadaPrivada(
+                paqueteDatos.getString("destino")!!
+            )
         }
 
         return fragmento

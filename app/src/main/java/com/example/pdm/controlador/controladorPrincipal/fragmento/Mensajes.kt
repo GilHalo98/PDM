@@ -18,7 +18,12 @@ import com.example.pdm.util.claseBase.FragmentoBase
 import com.example.pdm.util.validacionCampos
 import com.google.gson.Gson
 import io.socket.client.Socket
+import kotlinx.android.synthetic.main.fragmento_admin_panel.view.*
+import kotlinx.android.synthetic.main.fragmento_login.view.*
 import kotlinx.android.synthetic.main.fragmento_mensajes.view.*
+import kotlinx.android.synthetic.main.fragmento_mensajes.view.cargaLayout
+import kotlinx.android.synthetic.main.fragmento_mensajes.view.inputBusquedaCorreo
+import kotlinx.android.synthetic.main.fragmento_mensajes.view.mainLayout
 
 class Mensajes : FragmentoBase() {
     // Fragmentos.
@@ -26,9 +31,6 @@ class Mensajes : FragmentoBase() {
 
     // Para validar los campos.
     private val validadorCampos = validacionCampos()
-
-    // Bundle de datos pasados.
-    private lateinit var paqueteDatos: Bundle
 
     // Interfaz de socket.
     private lateinit var socketInterfaz: Socket
@@ -48,7 +50,11 @@ class Mensajes : FragmentoBase() {
         val token = paqueteDatos.get("token").toString()
 
         // Elementos del fragmento.
-        val fragmento = inflater.inflate(R.layout.fragmento_mensajes, container, false)
+        fragmento = inflater.inflate(
+            R.layout.fragmento_mensajes,
+            container,
+            false
+        )
 
         // Instanciamos el contexto de la app.
         val contexto = requireContext().applicationContext
@@ -74,11 +80,19 @@ class Mensajes : FragmentoBase() {
         val adaptadorRecicleView = AdaptadorComponenteMensajes(contexto)
         recycleView.adapter = adaptadorRecicleView
 
+        // Muestra un layout que indica que el fragmento se esta cargando.
+        fragmento.mainLayout.visibility = View.GONE
+        fragmento.cargaLayout.visibility = View.VISIBLE
+
         // Realiza la peticion al servidor.
         presentador.getContactosUsuario(token)
 
         // Mostramos los contactos de la lista de contactos de los usuarios.
         presentador.mostrarContactos(viewLifecycleOwner, recycleView, adaptadorRecicleView)
+
+        // Oculta el layout que indica que el fragmento se esta cargando.
+        fragmento.mainLayout.visibility = View.VISIBLE
+        fragmento.cargaLayout.visibility = View.GONE
 
         // Escucha por el evento en donde se precione una target del recycleView, si es
         // precionada, se manda a la sala de chat con el contacto.

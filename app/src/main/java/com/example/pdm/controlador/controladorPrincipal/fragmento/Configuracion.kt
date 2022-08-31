@@ -9,6 +9,7 @@ import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.pdm.ModeloInicial
@@ -20,7 +21,9 @@ import com.example.pdm.repository.Repository
 import com.example.pdm.util.claseBase.FragmentoBase
 import com.google.android.material.navigation.NavigationView
 import com.google.gson.Gson
+import kotlinx.android.synthetic.main.fragmento_admin_panel.view.*
 import kotlinx.android.synthetic.main.fragmento_login.view.*
+import kotlinx.android.synthetic.main.fragmento_login.view.mainLayout
 
 class Configuracion : FragmentoBase() {
     // Fragmentos.
@@ -38,9 +41,6 @@ class Configuracion : FragmentoBase() {
     // Presentador del fragmento.
     private lateinit var presentador: PresentadorConfiguracion
 
-    // Bundle de datos pasados.
-    private lateinit var paqueteDatos: Bundle
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
@@ -48,7 +48,7 @@ class Configuracion : FragmentoBase() {
         paqueteDatos = requireArguments()
 
         // Elementos del fragmento.
-        val fragmento = inflater.inflate(
+        fragmento = inflater.inflate(
             R.layout.fragmento_configuracion,
             container,
             false
@@ -85,50 +85,19 @@ class Configuracion : FragmentoBase() {
             PresentadorConfiguracion::class.java
         )
 
-        fragmento.scrollMainLayout.visibility = View.GONE
-        fragmento.circuloProgreso.visibility = View.VISIBLE
+        // Muestra un layout que indica que el fragmento se esta cargando.
+        fragmento.mainLayout.visibility = View.GONE
+        fragmento.cargaLayout.visibility = View.VISIBLE
 
         // Realiza la peticion al servidor.
         presentador.getUserData(paqueteDatos.getString("token")!!)
 
-        presentador.respuestaPeticion.observe(viewLifecycleOwner, Observer { respuesta ->
-            // Validamos la respuesta del servidor y la mostramos
-            if (!respuesta.isSuccessful && respuesta.errorBody() != null) {
-                try {
-                    // Formatea la respuesta a JSON.
-                    val respuestaError = Gson().fromJson(
-                        respuesta.errorBody()!!.string(),
-                        RespuestaGenerica::class.java
-                    )
+        // Mostramos los datos que se consultaron de la API.
+        presentador.mostrarDatos(viewLifecycleOwner, textViewUsername, textViewEstado)
 
-                    // Muestra en un Toast la respuesta del servidor.
-                    mostrarToast(
-                        contexto,
-                        respuestaError.codigo_respuesta.toString()
-                    )
-
-                } catch (excepcion: Exception) {
-                    // Si ocurre una excepcion, se muestra un log.
-                    Log.d("Error en la APP", excepcion.toString())
-                }
-
-            } else {
-                // Si no ocurrio algun error, entonces se muestra el mensaje.
-                mostrarToast(
-                    contexto,
-                    respuesta.body()!!.codigo_respuesta.toString()
-                )
-
-                // Reestablecemos las vistas a default.
-                fragmento.scrollMainLayout.visibility = View.VISIBLE
-                fragmento.circuloProgreso.visibility = View.GONE
-            }
-
-            if (respuesta.isSuccessful) {
-                textViewUsername.text = respuesta.body()!!.usuario.nombreUsuario
-                textViewEstado.text = respuesta.body()!!.preferencia.estadoPerfil
-            }
-        })
+        // Oculta el layout que indica que el fragmento se esta cargando.
+        fragmento.mainLayout.visibility = View.VISIBLE
+        fragmento.cargaLayout.visibility = View.GONE
 
         // Se escucha por eventos en el menu de configuraciones.
         menuConfiguraciones.setNavigationItemSelectedListener {

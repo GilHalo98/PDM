@@ -71,4 +71,7 @@
     <string name="sala_video_chat">Make a videochat conference room</string>
     <string name="codigo_sala">Add the code for your room</string>
     <string name="video_chat">Videochat Room</string>
+    <string name="confirmar_operacion">Are you shure to proceed with this operation?</string>
+    <string name="descripcion_confirmar_operacion">Once you do this, you cannot go back!</string>
+    <string name="peticion_video_llamada">A user is calling you</string>
 </resources>

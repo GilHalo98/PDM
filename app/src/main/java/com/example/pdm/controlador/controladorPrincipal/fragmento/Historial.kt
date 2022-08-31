@@ -12,7 +12,11 @@ class Historial : FragmentoBase() {
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
         // Elementos del fragmento.
-        val fragmento = inflater.inflate(R.layout.fragmento_historial, container, false)
+        fragmento = inflater.inflate(
+            R.layout.fragmento_historial,
+            container,
+            false
+        )
 
         return fragmento
     }

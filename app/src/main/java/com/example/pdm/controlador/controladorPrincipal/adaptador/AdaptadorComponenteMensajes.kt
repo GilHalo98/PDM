@@ -89,7 +89,6 @@ class AdaptadorComponenteMensajes(
 
     // Agrega un contacto listado del usuario a la vista.
     fun establcerListaContactos(lista: List<Contacto>) {
-        Log.d("lista", lista.toString())
         listaContactos = lista as ArrayList<Contacto>
     }
 

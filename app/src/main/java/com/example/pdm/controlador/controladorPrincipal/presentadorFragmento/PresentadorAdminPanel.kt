@@ -1,8 +1,10 @@
 package com.example.pdm.controlador.controladorPrincipal.presentadorFragmento
 
+import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
-import com.example.pdm.modelos.EliminarUsuarioAdmin
+import androidx.recyclerview.widget.RecyclerView
+import com.example.pdm.controlador.controladorPrincipal.adaptador.AdaptadorComponenteAdmin
 import com.example.pdm.modelos.ListaUsuariosAdmin
 import com.example.pdm.modelos.RespuestaGenerica
 import com.example.pdm.repository.Repository
@@ -23,12 +25,24 @@ class PresentadorAdminPanel(private val repository: Repository) : PresentadorBas
     }
 
     fun eliminarUsuario(token: String, usuarioEliminar: String) {
-        val usuarioEliminado = EliminarUsuarioAdmin(usuarioEliminar)
-
         viewModelScope.launch {
-            val respuestaAPI = repository.eliminarUsuario(token, usuarioEliminado)
+            val respuestaAPI = repository.eliminarUsuario(token, usuarioEliminar)
 
             respuestaEliminarUsuario.value = respuestaAPI
+        }
+    }
+
+    // Muestra los contactos del usuario de la lista del usuario en el recycleView.
+    fun mostrarUsuarios(ciclo: LifecycleOwner, recycleView: RecyclerView, adaptadorRecicleView: AdaptadorComponenteAdmin) {
+        // Observamos la respuesta de la peticion.
+        respuestaListaUsuarios.observe(ciclo) {
+            // Verificamos que sea una respuesta correcta.
+            if (it.isSuccessful) {
+                // Establecer la lista de contactos del adaptador a la lista de contactos pasada por
+                // la peticion echa al endpoint.
+                adaptadorRecicleView.establcerListaUsuarios(it.body()!!.usuarios)
+                recycleView.adapter = adaptadorRecicleView
+            }
         }
     }
 }
